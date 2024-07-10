@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {background-color: #dcdcdc; margin: 100px}
+        h1 {text-align: center; margin-bottom: 50px}
+        
+        div {margin: 20px}
+        
+        #primeiro, #segundo, #terceiro, #quarto, #quinto, #sexto, #setimo, #oitavo, #nono, #decimo {
+            background-color: #00bfff; border-radius: 20px; padding: 20px;
+        }
+        
+        #r1, #r2, #r3, #r4, #r5, #r6, #r7, #r8, #r9, #r10 {
+            background-color: #ff83db; border-radius: 20px; padding: 20px; display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Sistemas De Numeração </h1>
+    
+    <div id="primeiro">
+        <p onclick="toggleAnswer('r1', 's1')" id="n1">1. Como converter de base 2 para base 8?
+            <b style="float: right" id="s1">\/</b>
+        </p>
+        <hr>
+        <div id="r1">
+            R= De 3 em 3 bits, pegue o número binário (base 2) e divida por 8, o resto da divisão é o número octal. Por exemplo:
+            <hr>
+            101111
+            <hr>
+            Separando em 3 bits:
+            <hr>
+            101 111
+            <hr>
+            Dividindo cada um por 8:
+            <hr>
+            101 <u>/8</u><br>
+            <u>-96</u> 12<br>
+            5
+            <hr>
+            111 <u>/8</u><br>
+            <u>-104</u> 13<br>
+            7
+            <hr>
+            Justando os restos de divisão, temos o número octal: 57
+        </div>
+    </div>
+    
+    <div id="segundo">
+        <p onclick="toggleAnswer('r2', 's2')" id="n2">2. Como converter de base 2 para base 16?
+            <b style="float: right" id="s2">\/</b>
+        </p>
+        <hr>
+        <div id="r2">
+            R= De 4 em 4 bits, pegue o número binário (base 2) e converta cada grupo de 4 bits para o número hexadecimal correspondente. Por exemplo:
+            <hr>
+            10111111
+            <hr>
+            Separando em 4 bits:
+            <hr>
+            1011 1111
+            <hr>
+            Convertendo cada grupo:
+            <hr>
+            1011 -> B
+            <hr>
+            1111 -> F
+            <hr>
+            O número hexadecimal é: BF
+        </div>
+    </div>
+    
+    <div id="terceiro">
+        <p onclick="toggleAnswer('r3', 's3')" id="n3">3. Como converter de base 10 para base 2?
+            <b style="float: right" id="s3">\/</b>
+        </p>
+        <hr>
+        <div id="r3">
+            R= Divida o número decimal (base 10) repetidamente por 2, anotando o resto em cada divisão. Os restos anotados em ordem inversa formam o número binário. Por exemplo:
+            <hr>
+            45
+            <hr>
+            Dividindo por 2:
+            <hr>
+            45 ÷ 2 = 22, resto 1
+            <hr>
+            22 ÷ 2 = 11, resto 0
+            <hr>
+            11 ÷ 2 = 5, resto 1
+            <hr>
+            5 ÷ 2 = 2, resto 1
+            <hr>
+            2 ÷ 2 = 1, resto 0
+            <hr>
+            1 ÷ 2 = 0, resto 1
+            <hr>
+            O número binário é: 101101
+        </div>
+    </div>
+    
+    <div id="quarto">
+        <p onclick="toggleAnswer('r4', 's4')" id="n4">4. Como converter de base 10 para base 16?
+            <b style="float: right" id="s4">\/</b>
+        </p>
+        <hr>
+        <div id="r4">
+            R= Divida o número decimal (base 10) repetidamente por 16, anotando o resto em cada divisão. Converta os restos para a notação hexadecimal. Por exemplo:
+            <hr>
+            255
+            <hr>
+            Dividindo por 16:
+            <hr>
+            255 ÷ 16 = 15, resto 15 (F)
+            <hr>
+            15 ÷ 16 = 0, resto 15 (F)
+            <hr>
+            O número hexadecimal é: FF
+        </div>
+    </div>
+    
+    <div id="quinto">
+        <p onclick="toggleAnswer('r5', 's5')" id="n5">5. Como converter de base 16 para base 2?
+            <b style="float: right" id="s5">\/</b>
+        </p>
+        <hr>
+        <div id="r5">
+            R= Converta cada dígito hexadecimal para seu equivalente binário de 4 bits. Por exemplo:
+            <hr>
+            1F
+            <hr>
+            Convertendo cada dígito:
+            <hr>
+            1 -> 0001
+            <hr>
+            F -> 1111
+            <hr>
+            O número binário é: 00011111
+        </div>
+    </div>
+    
+    <div id="sexto">
+        <p onclick="toggleAnswer('r6', 's6')" id="n6">6. Como converter de base 8 para base 2?
+            <b style="float: right" id="s6">\/</b>
+        </p>
+        <hr>
+        <div id="r6">
+            R= Converta cada dígito octal para seu equivalente binário de 3 bits. Por exemplo:
+            <hr>
+            57
+            <hr>
+            Convertendo cada dígito:
+            <hr>
+            5 -> 101
+            <hr>
+            7 -> 111
+            <hr>
+            O número binário é: 101111
+        </div>
+    </div>
+    
+    <div id="setimo">
+        <p onclick="toggleAnswer('r7', 's7')" id="n7">7. Como converter de base 8 para base 10?
+            <b style="float: right" id="s7">\/</b>
+        </p>
+        <hr>
+        <div id="r7">
+            R= Multiplique cada dígito octal pelo valor de 8 elevado à posição do dígito, somando os resultados. Por exemplo:
+            <hr>
+            57
+            <hr>
+            5 * 8^1 + 7 * 8^0
+            <hr>
+            5 * 8 + 7 * 1
+            <hr>
+            40 + 7 = 47
+            <hr>
+            O número decimal é: 47
+        </div>
+    </div>
+    
+    <div id="oitavo">
+        <p onclick="toggleAnswer('r8', 's8')" id="n8">8. Como converter de base 16 para base 10?
+            <b style="float: right" id="s8">\/</b>
+        </p>
+        <hr>
+        <div id="r8">
+            R= Multiplique cada dígito hexadecimal pelo valor de 16 elevado à posição do dígito, somando os resultados. Por exemplo:
+            <hr>
+            1F
+            <hr>
+            1 * 16^1 + F * 16^0
+            <hr>
+            1 * 16 + 15 * 1
+            <hr>
+            16 + 15 = 31
+            <hr>
+            O número decimal é: 31
+        </div>
+    </div>
+    
+    <div id="nono">
+        <p onclick="toggleAnswer('r9', 's9')" id="n9">9. Como converter de base 2 para base 10?
+            <b style="float: right" id="s9">\/</b>
+        </p>
+        <hr>
+        <div id="r9">
+            R= Multiplique cada dígito binário pelo valor de 2 elevado à posição do dígito, somando os resultados. Por exemplo:
+            <hr>
+            101101
+            <hr>
+            1 * 2^5 + 0 * 2^4 + 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0
+            <hr>
+            1 * 32 + 0 * 16 + 1 * 8 + 1 * 4 + 0 * 2 + 1 * 1
+            <hr>
+            32 + 0 + 8 + 4 + 0 + 1 = 45
+            <hr>
+            O número decimal é: 45
+        </div>
+    </div>
+    
+    <div id="decimo">
+        <p onclick="toggleAnswer('r10', 's10')" id="n10">10. Como converter de base 10 para base 8?
+            <b style="float: right" id="s10">\/</b>
+        </p>
+        <hr>
+        <div id="r10">
+            R= Divida o número decimal (base 10) repetidamente por 8, anotando o resto em cada divisão. Os restos anotados em ordem inversa formam o número octal. Por exemplo:
+            <hr>
+            47
+            <hr>
+            Dividindo por 8:
+            <hr>
+            47 ÷ 8 = 5, resto 7
+            <hr>
+            5 ÷ 8 = 0, resto 5
+            <hr>
+            O número octal é: 57
+        </div>
+    </div>
+    
+    <script>
+        function toggleAnswer(id, arrowId) {
+            var answer = document.getElementById(id);
+            var arrow = document.getElementById(arrowId);
+            
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                arrow.innerHTML = "/\\";
+            } else {
+                answer.style.display = "none";
+                arrow.innerHTML = "\\/";
+            }
+        }
+    </script>
+</body>
+</html>
