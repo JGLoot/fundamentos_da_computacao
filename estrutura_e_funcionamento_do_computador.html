@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {background-color: #dcdcdc; margin: 100px}
+        h1 {text-align: center; margin-bottom: 50px}
+        
+        div {margin: 20px}
+        
+        #primeiro, #segundo, #terceiro, #quarto, #quinto, #sexto, #setimo, #oitavo, #nono, #decimo {
+            background-color: #00bfff; border-radius: 20px; padding: 20px;
+        }
+        
+        #r1, #r2, #r3, #r4, #r5, #r6, #r7, #r8, #r9, #r10 {
+            background-color: #ff83db; border-radius: 20px; padding: 20px; display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Estrutura e Funcionamento do Computador </h1>
+    <p style="text-align: center">Autores: Edson Lucas, João Gabriel, Matheus Kauê, Neemias Felipe e Welyngton Gonzaga</p>
+    
+    <div id="primeiro">
+        <p onclick="toggleAnswer('r1', 's1')" id="n1">1. Quais são os cinto elementos essenciais para o funcionamento do computador?
+            <b style="float: right" id="s1">\/</b>
+        </p>
+        <hr>
+        <div id="r1">
+            R= 
+        </div>
+    </div>
+    
+    <div id="segundo">
+        <p onclick="toggleAnswer('r2', 's2')" id="n2">2. Com suas palavras, explique o que é e como funciona uma Unidade Aritmética-Lógica (ULA)?
+            <b style="float: right" id="s2">\/</b>
+        </p>
+        <hr>
+        <div id="r2">
+            R=
+        </div>
+    </div>
+    
+    <div id="terceiro">
+        <p onclick="toggleAnswer('r3', 's3')" id="n3">3. Com suas palavras, explique o que é e como funciona uma Unidade De Memória?
+            <b style="float: right" id="s3">\/</b>
+        </p>
+        <hr>
+        <div id="r3">
+            R= 
+        </div>
+    </div>
+    
+    <div id="quarto">
+        <p onclick="toggleAnswer('r4', 's4')" id="n4">4. Com suas palavras, explique o que é e como funciona uma Unidade De Entrada?
+            <b style="float: right" id="s4">\/</b>
+        </p>
+        <hr>
+        <div id="r4">
+            R=
+        </div>
+    </div>
+    
+    <div id="quinto">
+        <p onclick="toggleAnswer('r5', 's5')" id="n5">5. Com suas palavras, explique o que é e como funciona uma Unidade De Saída?
+            <b style="float: right" id="s5">\/</b>
+        </p>
+        <hr>
+        <div id="r5">
+            R=
+        </div>
+    </div>
+    
+    <div id="sexto">
+        <p onclick="toggleAnswer('r6', 's6')" id="n6">6. Com suas palavras, explique o que é e como funciona uma Interface?
+            <b style="float: right" id="s6">\/</b>
+        </p>
+        <hr>
+        <div id="r6">
+            R=
+        </div>
+    </div>
+    
+    <div id="setimo">
+        <p onclick="toggleAnswer('r7', 's7')" id="n7">7. Com suas palavras, explique o que é e como funciona uma Unidade De Controle?
+            <b style="float: right" id="s7">\/</b>
+        </p>
+        <hr>
+        <div id="r7">
+            R=
+        </div>
+    </div>
+    
+    <div id="oitavo">
+        <p onclick="toggleAnswer('r8', 's8')" id="n8">8. Com suas palavras, explique o que é e como funciona um Processador (Unidade Central de Processamento)?
+            <b style="float: right" id="s8">\/</b>
+        </p>
+        <hr>
+        <div id="r8">
+            R=
+        </div>
+    </div>
+    
+    <div id="nono">
+        <p onclick="toggleAnswer('r9', 's9')" id="n9">9. Com suas palavras, explique o que é e como funciona um Circuito Lógico?
+            <b style="float: right" id="s9">\/</b>
+        </p>
+        <hr>
+        <div id="r9">
+            R=
+        </div>
+    </div>
+    
+    <div id="decimo">
+        <p onclick="toggleAnswer('r10', 's10')" id="n10">10. Com suas palavras, explique o que é e como funciona uma Placa-Mãe?
+            <b style="float: right" id="s10">\/</b>
+        </p>
+        <hr>
+        <div id="r10">
+            R= 
+        </div>
+    </div>
+    
+    <script>
+        function toggleAnswer(id, arrowId) {
+            var answer = document.getElementById(id);
+            var arrow = document.getElementById(arrowId);
+            
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                arrow.innerHTML = "/\\";
+            } else {
+                answer.style.display = "none";
+                arrow.innerHTML = "\\/";
+            }
+        }
+    </script>
+</body>
+</html>
