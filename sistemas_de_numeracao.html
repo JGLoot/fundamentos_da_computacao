@@ -5,7 +5,7 @@
     <style>
         body {background-color: #dcdcdc; margin: 100px}
         h1 {text-align: center; margin-bottom: 50px}
-        
+        table,tr,td {border: 1px solid black; text-align: center; padding: 5px}
         div {margin: 20px}
         
         #primeiro, #segundo, #terceiro, #quarto, #quinto, #sexto, #setimo, #oitavo, #nono, #decimo {
@@ -28,7 +28,7 @@
         </p>
         <hr>
         <div id="r1">
-            R= De 3 em 3 bits, pegue o número binário (base 2) e divida por 8, o resto da divisão é o número octal. Por exemplo:
+            R= De 3 em 3 bits, pegue os números binários (base 2) e divida por 8, o resto da divisão é o número octal. Por exemplo:
             <hr>
             101111
             <hr>
@@ -56,7 +56,7 @@
         </p>
         <hr>
         <div id="r2">
-            R= De 4 em 4 bits, pegue o número binário (base 2) e converta cada grupo de 4 bits para o número hexadecimal correspondente. Por exemplo:
+            R= De 4 em 4 bits, pegue os números binários (base 2) da direita para esquerda e multiplique por 2 elevado a expoentes sequencialmente, começando do 0. Some os resultados e converta o número se necessário (10=A, 11=B, 12=C, 13=D, 14=E, 15=F). Por exemplo:
             <hr>
             10111111
             <hr>
@@ -64,13 +64,62 @@
             <hr>
             1011 1111
             <hr>
-            Convertendo cada grupo:
+            Multiplicando por 2 elevado a expoentes sequencialmente:
             <hr>
-            1011 -> B
+            <table>
+            <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            
+            <tr>
+            <td>1x2<sup>3</sup></td>
+            <td>0x2<sup>2</sup></td>
+            <td>1x2<sup>1</sup></td>
+            <td>1x2<sup>0</sup></td>
+            </tr>
+            
+            <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            </table>
+            <br>
+            <table>
+            <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            
+            <tr>
+            <td>1x2<sup>3</sup></td>
+            <td>1x2<sup>2</sup></td>
+            <td>1x2<sup>1</sup></td>
+            <td>1x2<sup>0</sup></td>
+            </tr>
+            
+            <tr>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            </table>
             <hr>
-            1111 -> F
+            Somando o resultado e convertendo:
             <hr>
-            O número hexadecimal é: BF
+            8 + 0 + 2 + 1 = 11 = B<br>
+            8 + 4 + 2 + 1 = 15 = F
+            <hr>
+            Logo:
+            <hr>
+            10111111 em hexadecimal é BF
         </div>
     </div>
     
@@ -108,17 +157,19 @@
         </p>
         <hr>
         <div id="r4">
-            R= Divida o número decimal (base 10) repetidamente por 16, anotando o resto em cada divisão. Converta os restos para a notação hexadecimal. Por exemplo:
+            R= Divida o número decimal (base 10) repetidamente por 16, anotando o resto em cada divisão. Os restos anotados em ordem inversa formam o número hexadecimal. Converta os restos para a notação hexadecimal. Por exemplo:
             <hr>
-            255
+            260
             <hr>
             Dividindo por 16:
             <hr>
-            255 ÷ 16 = 15, resto 15 (F)
+            260 ÷ 16 = 16, resto 4
             <hr>
-            15 ÷ 16 = 0, resto 15 (F)
+            16 ÷ 16 = 1, resto 0
             <hr>
-            O número hexadecimal é: FF
+            1 ÷ 16 = 0, resto 1
+            <hr>
+            O número hexadecimal é: 104
         </div>
     </div>
     
@@ -128,17 +179,49 @@
         </p>
         <hr>
         <div id="r5">
-            R= Converta cada dígito hexadecimal para seu equivalente binário de 4 bits. Por exemplo:
+            R= Pegue os números hexadecimal (de base 16), separe-os e verfique quais potências de 2 menores que 16 foram necessárias para chegar em cada (8, 4, 2, 1). Aqueles que precisarem, equivale a 1, aqueles que não precisarem, equivale a 0, juntando-os formam o número binário. Por exemplo:
             <hr>
-            1F
+            7F
             <hr>
-            Convertendo cada dígito:
+            Separando e verificando quais potências de 2 menores que 16 foram necessárias para chegar em cada:
             <hr>
-            1 -> 0001
+            7<br>
+            <table>
+            <tr>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            </table><br>
+            Pois 4+2+1 = 7 e 8 > 7<br>
             <hr>
-            F -> 1111
+            F (F=15)<br>
+            <table>
+            <tr>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            </table><br>
+            Pois 8+4+2+1 = 15
             <hr>
-            O número binário é: 00011111
+            Então temos:
+            <hr>
+            0111111 como binário de 7F
         </div>
     </div>
     
