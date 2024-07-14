@@ -231,17 +231,45 @@
         </p>
         <hr>
         <div id="r6">
-            R= Converta cada dígito octal para seu equivalente binário de 3 bits. Por exemplo:
+            R= Pegue os números octal (de base 8), separe-os e verfique quais potências de 2 menores que 8 foram necessárias para chegar em cada (4, 2, 1). Aqueles que precisarem, equivale a 1, aqueles que não precisarem, equivale a 0, juntando-os formam o número binário. Por exemplo:
             <hr>
             57
             <hr>
-            Convertendo cada dígito:
+            Separando e verificando quais potências de 2 menores que 16 foram necessárias para chegar em cada:
             <hr>
-            5 -> 101
+            5<br>
+            <table>
+            <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            </tr>
+            </table><br>
+            Pois 4+1 = 5, com + 2 = 7 e 7 > 5<br>
             <hr>
-            7 -> 111
+            7<br>
+            <table>
+            <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            </tr>
+            <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            </tr>
+            </table><br>
+            Pois 4+2+1 = 7
             <hr>
-            O número binário é: 101111
+            Então temos:
+            <hr>
+            101111 como binário de 57
         </div>
     </div>
     
