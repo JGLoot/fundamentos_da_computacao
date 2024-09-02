@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios Sobre S.O</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .question:hover {
+            transform: scale(1.02);
+        }
+
+        .question-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .question.active .answer {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .references {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .references h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .references li {
+            margin-bottom: 10px;
+        }
+
+        .references a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .references a:hover {
+            color: #003399;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Lista de Exercícios Sobre S.O</h1>
+
+    <div class="question">
+        <div class="question-title">1. Conceitue as estruturas de SOs Monolítica, Em Camadas, Micronúcleo e Cliente-Servidor respectivamente:</div>
+        <div class="answer">As estruturas de SOs são diferentes modelos arquitetônicos usados na construção de sistemas operacionais. Monolítica é uma arquitetura em que todo o sistema opera em modo kernel, com grande complexidade e potencial de falhas. Em Camadas é dividida em camadas, onde cada uma delas é responsável por uma parte específica do sistema. Micronúcleo minimiza as funções do kernel, delegando a maior parte das operações para processos em espaço de usuário. Cliente-Servidor é baseado em comunicação entre processos onde clientes solicitam serviços que são atendidos por servidores.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">2. Qual a linguagem empregada no sistema Unix? Em que ano?</div>
+        <div class="answer">O sistema Unix foi escrito em linguagem C, desenvolvido em 1972.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">3. Quais foram os dois conceitos que o Unix lançou no mundo dos SOs? Explique-os.</div>
+        <div class="answer">Unix introduziu os conceitos de "arquivos como fluxos de bytes" e "sistemas de arquivos hierárquicos". O primeiro permite que todos os tipos de arquivos sejam manipulados de forma semelhante, enquanto o segundo organiza os arquivos em uma estrutura de diretórios em árvore.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">4. Quais são os sistemas de arquivos usados pelo Unix e Windows?</div>
+        <div class="answer">Os sistemas de arquivos usados pelo Unix incluem ext3, ext4, enquanto o Windows utiliza NTFS e FAT32.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">5. O que são GUIs, CLIs, TUIs, VUIs, NUIs, PUIs e BCIs?</div>
+        <div class="answer">GUI (Interface Gráfica do Usuário), CLI (Interface de Linha de Comando), TUI (Interface de Texto do Usuário), VUI (Interface de Voz do Usuário), NUI (Interface de Usuário Natural), PUI (Interface de Usuário Perceptiva), BCI (Interface Cérebro-Computador). Cada uma representa um método diferente de interação do usuário com um sistema operacional ou software.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">6. O que são “sistemas do tipo Unix” e qual a diferença para "sistema Unix"?</div>
+        <div class="answer">"Sistemas do tipo Unix" referem-se a sistemas operacionais que seguem as especificações do Unix e compartilham suas características, mas não são necessariamente certificados como Unix. Um "sistema Unix" é certificado e cumpre rigorosamente com as normas e características do Unix original.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">7. O que é um Firmware?</div>
+        <div class="answer">Firmware é um tipo de software que está gravado em um hardware e fornece controle de baixo nível para os dispositivos. Ele pode ser encontrado em tudo, desde PCs até eletrodomésticos.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">8. O que é um sistema de operação em bando?</div>
+        <div class="answer">Um sistema de operação em bando processa grandes volumes de dados em lotes, permitindo que tarefas repetitivas sejam automatizadas e executadas sem a necessidade de intervenção humana.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">9. O que é e como funcionam as Máquinas Virtuais?</div>
+        <div class="answer">Máquinas Virtuais (VMs) são ambientes de computação que emulam um computador físico. Funcionam executando um sistema operacional dentro de outro sistema operacional, permitindo a execução de múltiplos sistemas operacionais em um único hardware.</div>
+    </div>
+
+    <div class="question">
+        <div class="question-title">10. O que é RAID?</div>
+        <div class="answer">RAID (Redundant Array of Independent Disks) é uma tecnologia que combina vários discos rígidos em um único sistema para redundância de dados, aumento de desempenho ou ambos. Existem diferentes níveis de RAID, cada um com suas próprias características.</div>
+    </div>
+
+    <div class="references">
+        <h2>Referências:</h2>
+        <ul>
+            <li><a href="https://medium.com/@celionormando/sistemas-operacionais-31f3bb12c0d1" target="_blank">https://medium.com/@celionormando/sistemas-operacionais-31f3bb12c0d1</a></li>
+            <li><a href="https://www.tecmundo.com.br/mac-os-x/10556-unix-o-pai-de-todos-os-sistemas-operacionais.htm" target="_blank">https://www.tecmundo.com.br/mac-os-x/10556-unix-o-pai-de-todos-os-sistemas-operacionais.htm</a></li>
+            <li><a href="https://acervolima.com/diferenca-entre-o-sistema-operacional-unix-e-windows/" target="_blank">https://acervolima.com/diferenca-entre-o-sistema-operacional-unix-e-windows/</a></li>
+            <li><a href="https://www.computerweekly.com/br/answer/Quais-sao-as-vantagens-e-desvantagens-da-CLI-e-GUI" target="_blank">https://www.computerweekly.com/br/answer/Quais-sao-as-vantagens-e-desvantagens-da-CLI-e-GUI</a></li>
+            <li><a href="https://luby.com.br/desenvolvimento/software/o-que-e-unix/" target="_blank">https://luby.com.br/desenvolvimento/software/o-que-e-unix/</a></li>
+            <li><a href="https://www.ionos.com/pt-br/digitalguide/sites-de-internet/design-de-sites/interface-grafica-do-usuario-gui/" target="_blank">https://www.ionos.com/pt-br/digitalguide/sites-de-internet/design-de-sites/interface-grafica-do-usuario-gui/</a></li>
+            <li><a href="https://blog.betrybe.com/tecnologia/sistema-operacional-tudo-sobre/" target="_blank">https://blog.betrybe.com/tecnologia/sistema-operacional-tudo-sobre/</a
+            <li><a href="https://azure.microsoft.com/pt-br/resources/cloud-computing-dictionary/what-is-a-virtual-machine/#:~:text=Uma%20m%C3%A1quina%20virtual%2C%20tamb%C3%A9m%20conhecida,conectar%20%C3%A0%20Internet%2C%20se%20necess%C3%A1rio." target="_blank">https://azure.microsoft.com/pt-br/resources/cloud-computing-dictionary/what-is-a-virtual-machine/</a></li>
+            <li><a href="https://bot.rec.br/o-que-e-raid/" target="_blank">https://bot.rec.br/o-que-e-raid/</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
